@@ -1012,6 +1012,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@radix-ui/react-separator@npm:^1.1.4":
+  version: 1.1.4
+  resolution: "@radix-ui/react-separator@npm:1.1.4"
+  dependencies:
+    "@radix-ui/react-primitive": "npm:2.1.0"
+  peerDependencies:
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+  checksum: 10/a47c09d399b0938c73105a491515aa632a7a61c862b27026f30d7b62146eac2ac363c0926892c141e9fa5e63bb7f9c74e8eef69cab1c23314c5dba9b6e19b019
+  languageName: node
+  linkType: hard
+
 "@radix-ui/react-slot@npm:1.2.0, @radix-ui/react-slot@npm:^1.2.0":
   version: 1.2.0
   resolution: "@radix-ui/react-slot@npm:1.2.0"
@@ -2300,6 +2319,7 @@ __metadata:
     "@hookform/resolvers": "npm:^5.0.1"
     "@radix-ui/react-label": "npm:^2.1.4"
     "@radix-ui/react-select": "npm:^2.2.2"
+    "@radix-ui/react-separator": "npm:^1.1.4"
     "@radix-ui/react-slot": "npm:^1.2.0"
     "@tailwindcss/postcss": "npm:^4.1.4"
     "@tailwindcss/typography": "npm:^0.5.16"
