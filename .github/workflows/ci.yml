@@ -1,0 +1,126 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+  NODE_ENV: production
+  NEXT_TELEMETRY_DISABLED: 1
+
+jobs:
+  typecheck:
+    name: Type Checking
+    runs-on: blacksmith-2vcpu-ubuntu-2204
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: useblacksmith/setup-node@v5
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Check Types
+        # setup-node tsc problem matcher doesn't like pretty errors
+        run: yarn typecheck --pretty false
+
+  linting:
+    name: Linting
+    runs-on: blacksmith-2vcpu-ubuntu-2204
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: useblacksmith/setup-node@v5
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Run ESLint
+        run: yarn lint
+
+  formatting:
+    name: Formatting
+    runs-on: blacksmith-2vcpu-ubuntu-2204
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: useblacksmith/setup-node@v5
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Run Prettier
+        run: yarn prettier --check .
+
+  commitlint:
+    name: Commit Message Linting
+    runs-on: blacksmith-2vcpu-ubuntu-2204
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: useblacksmith/setup-node@v5
+        with:
+          node-version: 22
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      # https://commitlint.js.org/guides/ci-setup#github-actions
+      - name: Validate current commit (last commit) with commitlint
+        if: github.event_name == 'push'
+        run: yarn commitlint --last --verbose
+
+      - name: Validate PR commits with commitlint
+        if: github.event_name == 'pull_request'
+        run: yarn commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
+  build:
+    name: Build
+    runs-on: blacksmith-2vcpu-ubuntu-2204
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: useblacksmith/setup-node@v5
+        with:
+          node-version: 22
+          cache: yarn
+
+      - uses: useblacksmith/cache@v5
+        with:
+          path: |
+            ${{ github.workspace }}/.next/cache
+          # Generate a new cache whenever packages or source files change.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Build
+        run: yarn build
