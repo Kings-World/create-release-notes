@@ -1239,10 +1239,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "class-variance-authority@npm:0.7.1"
+  dependencies:
+    clsx: "npm:^2.1.1"
+  checksum: 10/27a1face3f5ee88caa7813743461977aef5110830dc8e8960e7c9570598b37ffb8b2760b4e5d738dc827b0eb9058ddd204e9002e9af0ef39b6851f6ea9aa82c1
+  languageName: node
+  linkType: hard
+
 "client-only@npm:0.0.1":
   version: 0.0.1
   resolution: "client-only@npm:0.0.1"
   checksum: 10/0c16bf660dadb90610553c1d8946a7fdfb81d624adea073b8440b7d795d5b5b08beb3c950c6a2cf16279365a3265158a236876d92bce16423c485c322d7dfaf8
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10/cdfb57fa6c7649bbff98d9028c2f0de2f91c86f551179541cf784b1cfdc1562dcb951955f46d54d930a3879931a980e32a46b598acaea274728dbe068deca919
   languageName: node
   linkType: hard
 
@@ -1298,15 +1314,20 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
+    class-variance-authority: "npm:^0.7.1"
+    clsx: "npm:^2.1.1"
     eslint: "npm:^9"
     eslint-config-next: "npm:15.3.1"
     eslint-config-prettier: "npm:^10.1.2"
+    lucide-react: "npm:^0.503.0"
     next: "npm:15.3.1"
     prettier: "npm:^3.5.3"
     prettier-plugin-tailwindcss: "npm:^0.6.11"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
+    tailwind-merge: "npm:^3.2.0"
     tailwindcss: "npm:^4"
+    tw-animate-css: "npm:^1.2.8"
     typescript: "npm:^5"
   languageName: unknown
   linkType: soft
@@ -2756,6 +2777,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.503.0":
+  version: 0.503.0
+  resolution: "lucide-react@npm:0.503.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10/d7564a59c0b88868162c2af9633df18009635db9cad222ef05533c2ef02fd48921d5d057c447ce5435b3df2e5b68eab9f3a378beffdbc13b205f5b79ea21c8d8
+  languageName: node
+  linkType: hard
+
 "math-intrinsics@npm:^1.1.0":
   version: 1.1.0
   resolution: "math-intrinsics@npm:1.1.0"
@@ -3727,6 +3757,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tailwind-merge@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "tailwind-merge@npm:3.2.0"
+  checksum: 10/ece231b18bf27cb70847e236d987e254c152e0440dbeb59c08ddf157de79fe89d6b7d1127c75d753e868f31dd77ded38ce8d23a1e405ff735a6642407c671fb9
+  languageName: node
+  linkType: hard
+
 "tailwindcss@npm:4.1.4, tailwindcss@npm:^4":
   version: 4.1.4
   resolution: "tailwindcss@npm:4.1.4"
@@ -3785,6 +3822,13 @@ __metadata:
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10/3e2e043d5c2316461cb54e5c7fe02c30ef6dccb3384717ca22ae5c6b5bc95232a6241df19c622d9c73b809bea33b187f6dbc73030963e29950c2141bc32a79f7
+  languageName: node
+  linkType: hard
+
+"tw-animate-css@npm:^1.2.8":
+  version: 1.2.8
+  resolution: "tw-animate-css@npm:1.2.8"
+  checksum: 10/ad91a472634b9d5bffce228541ec67f8eab642f9dcddc1b7910697c57403401d4c854f491c6a390c2491ff497c6a4978dc67b599657adbc5f1ecb65e5ad2e7d1
   languageName: node
   linkType: hard
 
