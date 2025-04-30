@@ -5,6 +5,7 @@ import "@/lib/env";
 
 const nextConfig: NextConfig = {
     poweredByHeader: false,
+    output: "standalone",
     images: {
         remotePatterns: [
             {
