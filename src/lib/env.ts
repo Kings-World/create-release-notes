@@ -2,6 +2,10 @@ import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
 export const env = createEnv({
+    // we don't really need to validate env vars in github actions right now
+    // im not using client env vars, so there is nothing to bundle
+    skipValidation: process.env.CI === "true",
+
     /*
      * Server-side Environment variables, not available on the client.
      * Will throw if you access these variables on the client.

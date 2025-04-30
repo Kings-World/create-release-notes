@@ -9,6 +9,7 @@ on:
 env:
   NODE_ENV: production
   NEXT_TELEMETRY_DISABLED: 1
+  CI: true
 
 jobs:
   typecheck:
