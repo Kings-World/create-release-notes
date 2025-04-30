@@ -10,9 +10,9 @@
         "format": "prettier -wu .",
         "typecheck": "tsc --noEmit",
         "scan": "yarn dev & react-scan localhost:3000",
-        "pages:build": "next-on-pages",
-        "pages:preview": "yarn pages:build && wrangler pages dev",
-        "pages:deploy": "yarn pages:build && wrangler pages deploy"
+        "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+        "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+        "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
     },
     "dependencies": {
         "@discordjs/core": "^2.1.0",
@@ -40,10 +40,10 @@
         "zod-validation-error": "^3.4.0"
     },
     "devDependencies": {
-        "@cloudflare/next-on-pages": "^1.13.12",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
         "@eslint/eslintrc": "^3.3.1",
+        "@opennextjs/cloudflare": "^1.0.0-beta.4",
         "@tailwindcss/postcss": "^4.1.4",
         "@tailwindcss/typography": "^0.5.16",
         "@types/node": "^22.15.3",
@@ -59,7 +59,8 @@
         "react-scan": "^0.3.3",
         "tailwindcss": "^4.1.4",
         "tw-animate-css": "^1.2.8",
-        "typescript": "^5.8.3"
+        "typescript": "^5.8.3",
+        "wrangler": "^4.14.0"
     },
     "packageManager": "yarn@4.9.1"
 }
