@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "Release Notes Generator",
     description: "Create and publish release notes to Discord",
+    robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
@@ -28,9 +29,10 @@ export default function RootLayout({
         <html
             lang="en"
             className={cn("dark", geistSans.variable, geistMono.variable)}
+            suppressHydrationWarning
         >
-            <body className="antialiased">
-                {children}
+            <body className="min-h-svh antialiased">
+                <main className="flex-1">{children}</main>
                 <Toaster richColors />
             </body>
         </html>
