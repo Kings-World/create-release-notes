@@ -9,7 +9,10 @@
         "lint": "next lint",
         "format": "prettier -wu .",
         "typecheck": "tsc --noEmit",
-        "scan": "yarn dev & react-scan localhost:3000"
+        "scan": "yarn dev & react-scan localhost:3000",
+        "pages:build": "next-on-pages",
+        "pages:preview": "yarn pages:build && wrangler pages dev",
+        "pages:deploy": "yarn pages:build && wrangler pages deploy"
     },
     "dependencies": {
         "@discordjs/core": "^2.1.0",
@@ -37,6 +40,7 @@
         "zod-validation-error": "^3.4.0"
     },
     "devDependencies": {
+        "@cloudflare/next-on-pages": "^1.13.12",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
         "@eslint/eslintrc": "^3.3.1",
