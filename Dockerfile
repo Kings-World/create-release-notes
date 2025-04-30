@@ -22,7 +22,7 @@ ENV NEXT_TELEMETRY_DISABLED=1 \
 
 RUN yarn build
 
-FROM base as runner
+FROM base AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production \
