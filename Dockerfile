@@ -2,7 +2,7 @@ FROM node:22-alpine AS base
 
 FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat openssl
 WORKDIR /app
 
 ENV YARN_DISABLE_GIT_HOOKS=1
@@ -18,6 +18,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED=1 \
+    NODE_ENV=production \
     CI=true
 
 RUN yarn build
@@ -44,6 +45,7 @@ EXPOSE 3000
 # https://nextjs.org/docs/pages/api-reference/config/next-config-js/output
 ENV PORT=3000 \
     HOSTNAME="0.0.0.0" \
-    NEXT_TELEMETRY_DISABLED=1
+    NEXT_TELEMETRY_DISABLED=1 \
+    NODE_ENV=production
 
 CMD ["node", "server.js"]
