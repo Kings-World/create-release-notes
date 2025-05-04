@@ -25,14 +25,6 @@ export const formSchema = z.object({
         }),
     secretKey: z.string().min(1, "Please enter the secret key"),
     files: z.array(z.custom<File>()).max(10, "You can only upload 10 files"),
-    // .refine(
-    //     (files) =>
-    //         files.reduce((size, file) => size + file.size, 0) >
-    //         1 * 1024 * 1024,
-    //     {
-    //         message: "The total size of all files must be less than 1MB",
-    //     },
-    // ),
 });
 
 export type FormSchema = z.infer<typeof formSchema>;

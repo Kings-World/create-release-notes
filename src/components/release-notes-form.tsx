@@ -59,9 +59,7 @@ export function ReleaseNotesForm() {
     });
 
     async function onSubmit(data: FormSchema) {
-        const id = toast.loading("Publishing release notes...", {
-            // duration: Infinity,
-        });
+        const id = toast.loading("Publishing release notes...");
 
         const formData = new FormData();
         for (const [key, value] of Object.entries(data)) {
@@ -235,8 +233,6 @@ export function ReleaseNotesForm() {
 
                                             // mp4
                                             "video/mp4",
-
-                                            // "image/webp,image/png,image/jpeg,image/jpg,image/gif,video/mp4,video",
                                         ].join(",")}
                                         onFileReject={(file, message) => {
                                             toast.warning(message, {

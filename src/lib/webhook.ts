@@ -34,65 +34,8 @@ export async function sendWebhookMessage(data: FormSchema) {
               )
             : [];
 
-    const body = {
-        flags: MessageFlags.IsComponentsV2,
-        components: [
-            {
-                type: ComponentType.TextDisplay,
-                content: message,
-            },
-            {
-                type: ComponentType.Container,
-                components: [
-                    {
-                        type: ComponentType.TextDisplay,
-                        content: getProjectHeader(data.project, data.version),
-                    },
-                    {
-                        type: ComponentType.TextDisplay,
-                        content: data.changelog,
-                    },
-                    {
-                        type: ComponentType.Separator,
-                        divider: true,
-                        spacing: SeparatorSpacingSize.Small,
-                    },
-                    ...sections.map(
-                        (section) =>
-                            ({
-                                type: ComponentType.Section,
-                                components: [
-                                    {
-                                        type: ComponentType.TextDisplay,
-                                        content: section.content,
-                                    },
-                                ],
-                                accessory: {
-                                    type: ComponentType.Button,
-                                    style: ButtonStyle.Link,
-                                    label: section.button.label,
-                                    url: section.button.url,
-                                },
-                            }) satisfies APIComponentInContainer,
-                    ),
-                ],
-            },
-            ...(files.length > 0
-                ? [
-                      {
-                          type: ComponentType.MediaGallery,
-                          items: files.map((file) => ({
-                              media: {
-                                  url: `attachment://${file.name}`,
-                                  content_type: file.contentType,
-                              },
-                          })),
-                      } satisfies APIMessageTopLevelComponent,
-                  ]
-                : []),
-        ],
-    } satisfies RESTPostAPIWebhookWithTokenJSONBody;
-
+    // api.webhooks.execute() can be given { with_components: true } but will not be passed
+    // to the search query, so i have to make do with manual rest call
     return rest.post(Routes.webhook(env.WEBHOOK_ID, env.WEBHOOK_TOKEN), {
         query: makeURLSearchParams({
             wait: true,
@@ -101,55 +44,68 @@ export async function sendWebhookMessage(data: FormSchema) {
         }),
         auth: false,
         files,
-        body,
+        body: {
+            flags: MessageFlags.IsComponentsV2,
+            components: [
+                {
+                    type: ComponentType.TextDisplay,
+                    content: message,
+                },
+                {
+                    type: ComponentType.Container,
+                    components: [
+                        {
+                            type: ComponentType.TextDisplay,
+                            content: getProjectHeader(
+                                data.project,
+                                data.version,
+                            ),
+                        },
+                        {
+                            type: ComponentType.TextDisplay,
+                            content: data.changelog,
+                        },
+                        {
+                            type: ComponentType.Separator,
+                            divider: true,
+                            spacing: SeparatorSpacingSize.Small,
+                        },
+                        ...sections.map(
+                            (section) =>
+                                ({
+                                    type: ComponentType.Section,
+                                    components: [
+                                        {
+                                            type: ComponentType.TextDisplay,
+                                            content: section.content,
+                                        },
+                                    ],
+                                    accessory: {
+                                        type: ComponentType.Button,
+                                        style: ButtonStyle.Link,
+                                        label: section.button.label,
+                                        url: section.button.url,
+                                    },
+                                }) satisfies APIComponentInContainer,
+                        ),
+                    ],
+                },
+                ...(files.length > 0
+                    ? [
+                          {
+                              type: ComponentType.MediaGallery,
+                              items: files.map((file) => ({
+                                  media: {
+                                      url: `attachment://${file.name}`,
+                                      content_type: file.contentType,
+                                  },
+                              })),
+                          } satisfies APIMessageTopLevelComponent,
+                      ]
+                    : []),
+            ],
+        } satisfies RESTPostAPIWebhookWithTokenJSONBody,
     });
-
-    // return api.webhooks.execute(env.WEBHOOK_ID, env.WEBHOOK_TOKEN, {
-    //     flags: MessageFlags.IsComponentsV2,
-    //     with_components: true,
-    //     components: [
-    //         {
-    //             type: ComponentType.TextDisplay,
-    //             content: message,
-    //         },
-    //         {
-    //             type: ComponentType.Container,
-    //             components: [
-    //                 {
-    //                     type: ComponentType.TextDisplay,
-    //                     content: getProjectHeader(data.project, data.version),
-    //                 },
-    //                 {
-    //                     type: ComponentType.TextDisplay,
-    //                     content: data.changelog,
-    //                 },
-    //                 {
-    //                     type: ComponentType.Separator,
-    //                     divider: true,
-    //                     spacing: SeparatorSpacingSize.Small,
-    //                 },
-    //                 ...sections.map(
-    //                     (section) =>
-    //                         ({
-    //                             type: ComponentType.Section,
-    //                             components: [
-    //                                 {
-    //                                     type: ComponentType.TextDisplay,
-    //                                     content: section.content,
-    //                                 },
-    //                             ],
-    //                             accessory: {
-    //                                 type: ComponentType.Button,
-    //                                 style: ButtonStyle.Link,
-    //                                 label: section.button.label,
-    //                                 url: section.button.url,
-    //                             },
-    //                         }) satisfies APIComponentInContainer,
-    //                 ),
-    //             ],
-    //         },
-    //     ],
-    // });
 }
 
 function getFileExt(filename: string) {
