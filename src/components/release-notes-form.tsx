@@ -94,7 +94,7 @@ export function ReleaseNotesForm() {
     }
 
     return (
-        <div className="grid min-w-full grid-cols-1 gap-6 pt-12 md:grid-cols-2">
+        <div className="grid min-w-full grid-cols-1 gap-6 pt-8 md:grid-cols-2">
             <Form {...form}>
                 <form
                     onSubmit={form.handleSubmit(onSubmit)}
