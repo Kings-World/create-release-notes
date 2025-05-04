@@ -1,0 +1,13 @@
+import type { FormSchema } from "@/lib/form";
+import { type Control, useWatch } from "react-hook-form";
+import ReactMarkdown from "react-markdown";
+
+export function Markdown({ control }: { control: Control<FormSchema> }) {
+    const changelog = useWatch({ control, name: "changelog" });
+
+    return (
+        <ReactMarkdown>
+            {changelog || "Please enter a changelog first."}
+        </ReactMarkdown>
+    );
+}

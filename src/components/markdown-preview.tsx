@@ -1,14 +1,16 @@
-import ReactMarkdown from "react-markdown";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { cn } from "@/lib/utils";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { ExternalLink } from "lucide-react";
-import type { PreviewData } from "@/lib/form";
-import { getProjectEmoji, sections } from "@/lib/discord";
-import NextImage from "next/image";
+import type { FormSchema } from "@/lib/form";
+import { sections } from "@/lib/discord";
+import { ProjectAndVersion } from "./markdown-preview/project-and-version";
+import { ProjectEmoji } from "./markdown-preview/project-emoji";
+import { Markdown } from "./markdown-preview/markdown";
+import type { Control } from "react-hook-form";
 
-export function MarkdownPreview({ project, version, changelog }: PreviewData) {
+export function MarkdownPreview({ control }: { control: Control<FormSchema> }) {
     return (
         <Card>
             <CardHeader>
@@ -22,24 +24,10 @@ export function MarkdownPreview({ project, version, changelog }: PreviewData) {
                 )}
             >
                 <h1 className="inline-flex items-center gap-1.5">
-                    {getProjectEmoji(project) && (
-                        <NextImage
-                            src={`https://cdn.discordapp.com/emojis/${getProjectEmoji(project)}.webp?size=44`}
-                            alt=":kings_beta:"
-                            draggable="false"
-                            className="my-0! h-9 align-text-top"
-                            width={36}
-                            height={36}
-                            role="img"
-                        />
-                    )}
-                    <span>
-                        {project || "Project"} v{version || "0.0.0"}
-                    </span>
+                    <ProjectEmoji control={control} />
+                    <ProjectAndVersion control={control} />
                 </h1>
-                <ReactMarkdown>
-                    {changelog || "Please enter a changelog first."}
-                </ReactMarkdown>
+                <Markdown control={control} />
                 <Separator />
                 {sections.map((section, index) => (
                     <div className="mt-2 flex flex-col gap-1" key={index}>

@@ -65,11 +65,8 @@ export function calculateRemainingLength(previewData: PreviewData) {
     return componentMaxLength - changelogLength;
 }
 
-export function calculateMaxLength(previewData: PreviewData) {
-    const header = calculateHeaderLength(
-        previewData.project,
-        previewData.version,
-    );
+export function calculateMaxLength(project: string, version: string) {
+    const header = calculateHeaderLength(project, version);
     const links = calculateSectionContentLength();
 
     return componentMaxLength - message.length - header - links;

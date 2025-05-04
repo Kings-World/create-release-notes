@@ -11,6 +11,7 @@ import {
     type RESTPostAPIWebhookWithTokenJSONBody,
 } from "@discordjs/core/http-only";
 import { makeURLSearchParams, REST, type RawFile } from "@discordjs/rest";
+import { nanoid } from "nanoid";
 
 import type { FormSchema } from "./form";
 import { getProjectHeader, message, sections } from "./discord";
@@ -25,13 +26,72 @@ export async function sendWebhookMessage(data: FormSchema) {
                   data.files.map(
                       async (file) =>
                           ({
-                              name: file.name,
+                              name: `${nanoid(8)}${getFileExt(file.name)}`,
                               data: await file.bytes(),
                               contentType: file.type,
                           }) satisfies RawFile,
                   ),
               )
             : [];
+
+    const body = {
+        flags: MessageFlags.IsComponentsV2,
+        components: [
+            {
+                type: ComponentType.TextDisplay,
+                content: message,
+            },
+            {
+                type: ComponentType.Container,
+                components: [
+                    {
+                        type: ComponentType.TextDisplay,
+                        content: getProjectHeader(data.project, data.version),
+                    },
+                    {
+                        type: ComponentType.TextDisplay,
+                        content: data.changelog,
+                    },
+                    {
+                        type: ComponentType.Separator,
+                        divider: true,
+                        spacing: SeparatorSpacingSize.Small,
+                    },
+                    ...sections.map(
+                        (section) =>
+                            ({
+                                type: ComponentType.Section,
+                                components: [
+                                    {
+                                        type: ComponentType.TextDisplay,
+                                        content: section.content,
+                                    },
+                                ],
+                                accessory: {
+                                    type: ComponentType.Button,
+                                    style: ButtonStyle.Link,
+                                    label: section.button.label,
+                                    url: section.button.url,
+                                },
+                            }) satisfies APIComponentInContainer,
+                    ),
+                ],
+            },
+            ...(files.length > 0
+                ? [
+                      {
+                          type: ComponentType.MediaGallery,
+                          items: files.map((file) => ({
+                              media: {
+                                  url: `attachment://${file.name}`,
+                                  content_type: file.contentType,
+                              },
+                          })),
+                      } satisfies APIMessageTopLevelComponent,
+                  ]
+                : []),
+        ],
+    } satisfies RESTPostAPIWebhookWithTokenJSONBody;
 
     return rest.post(Routes.webhook(env.WEBHOOK_ID, env.WEBHOOK_TOKEN), {
         query: makeURLSearchParams({
@@ -41,67 +101,7 @@ export async function sendWebhookMessage(data: FormSchema) {
         }),
         auth: false,
         files,
-        body: {
-            flags: MessageFlags.IsComponentsV2,
-            components: [
-                {
-                    type: ComponentType.TextDisplay,
-                    content: message,
-                },
-                {
-                    type: ComponentType.Container,
-                    components: [
-                        {
-                            type: ComponentType.TextDisplay,
-                            content: getProjectHeader(
-                                data.project,
-                                data.version,
-                            ),
-                        },
-                        {
-                            type: ComponentType.TextDisplay,
-                            content: data.changelog,
-                        },
-                        {
-                            type: ComponentType.Separator,
-                            divider: true,
-                            spacing: SeparatorSpacingSize.Small,
-                        },
-                        ...sections.map(
-                            (section) =>
-                                ({
-                                    type: ComponentType.Section,
-                                    components: [
-                                        {
-                                            type: ComponentType.TextDisplay,
-                                            content: section.content,
-                                        },
-                                    ],
-                                    accessory: {
-                                        type: ComponentType.Button,
-                                        style: ButtonStyle.Link,
-                                        label: section.button.label,
-                                        url: section.button.url,
-                                    },
-                                }) satisfies APIComponentInContainer,
-                        ),
-                    ],
-                },
-                ...(files.length > 0
-                    ? [
-                          {
-                              type: ComponentType.MediaGallery,
-                              items: files.map((file) => ({
-                                  media: {
-                                      url: `attachment://${file.name}`,
-                                      content_type: file.contentType,
-                                  },
-                              })),
-                          } satisfies APIMessageTopLevelComponent,
-                      ]
-                    : []),
-            ],
-        } satisfies RESTPostAPIWebhookWithTokenJSONBody,
+        body,
     });
 
     // return api.webhooks.execute(env.WEBHOOK_ID, env.WEBHOOK_TOKEN, {
@@ -150,4 +150,10 @@ export async function sendWebhookMessage(data: FormSchema) {
     //         },
     //     ],
     // });
+}
+
+function getFileExt(filename: string) {
+    const index = filename.lastIndexOf(".");
+    if (index <= 0) return "";
+    return filename.slice(index);
 }

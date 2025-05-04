@@ -1,7 +1,6 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import {
@@ -21,18 +20,10 @@ import {
     SelectValue,
 } from "./ui/select";
 import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { CloudUpload, Loader2, X } from "lucide-react";
 import { MarkdownPreview } from "./markdown-preview";
-import {
-    changelogPresetValue,
-    formSchema,
-    type FormSchema,
-    type PreviewData,
-} from "@/lib/form";
-import { calculateMaxLength, calculateRemainingLength } from "@/lib/discord";
-import { submitReleaseNotes } from "@/actions/create-release";
+import { changelogPresetValue, formSchema, type FormSchema } from "@/lib/form";
 import {
     FileUpload,
     FileUploadDropzone,
@@ -43,11 +34,17 @@ import {
     FileUploadList,
     FileUploadTrigger,
 } from "./ui/file-upload";
-import {
-    calculateTotalFileSize,
-    discordAttachmentSizeLimit,
-} from "@/lib/utils";
-import xbytes from "xbytes";
+import { discordAttachmentSizeLimit } from "@/lib/utils";
+import { z } from "zod";
+import { fromZodError } from "zod-validation-error";
+import { ChangelogTextArea } from "./release-notes/changelog-text-area";
+import { RemainingCharacters } from "./release-notes/remaining-characters";
+import { TotalBytes } from "./release-notes/total-bytes";
+
+const apiResultSchema = z.union([
+    z.object({ success: z.literal(true) }),
+    z.object({ success: z.literal(false), message: z.string() }),
+]);
 
 export function ReleaseNotesForm() {
     const form = useForm<FormSchema>({
@@ -61,32 +58,41 @@ export function ReleaseNotesForm() {
         },
     });
 
-    const [previewData, setPreviewData] = useState<PreviewData>({
-        project: form.formState.defaultValues?.project,
-        version: form.formState.defaultValues?.version,
-        changelog: form.formState.defaultValues?.changelog,
-    });
-
-    useEffect(() => {
-        // update preview when form values change
-        const subscription = form.watch(({ secretKey, ...preview }) => {
-            setPreviewData(preview);
-            void secretKey; // we don't need the secret key in the preview
-        });
-        return () => subscription.unsubscribe();
-    }, [form, form.watch]);
-
     async function onSubmit(data: FormSchema) {
-        const output = toast.promise(() => submitReleaseNotes(data), {
-            success: (out) => {
-                console.log("out", out);
-                return "Release notes published successfully!";
-            },
-            error: (out) => out.message || "Failed to publish release notes",
-            loading: "Publishing release notes...",
+        const id = toast.loading("Publishing release notes...", {
+            // duration: Infinity,
         });
 
-        await output.unwrap().catch(() => null);
+        const formData = new FormData();
+        for (const [key, value] of Object.entries(data)) {
+            if (typeof value === "string") {
+                formData.append(key, value);
+            } else {
+                for (const file of value) {
+                    formData.append(key, file, file.name);
+                }
+            }
+        }
+
+        const res = await fetch("/api/release-notes", {
+            method: "POST",
+            body: formData,
+        });
+
+        const result = await res.json();
+        const parsed = apiResultSchema.safeParse(result);
+        if (!parsed.success) {
+            toast.error(fromZodError(parsed.error).toString(), { id });
+            return;
+        }
+
+        if (!parsed.data.success) {
+            toast.error(parsed.data.message, { id });
+            return;
+        }
+
+        toast.success("Release notes published successfully!", { id });
+        form.reset();
     }
 
     return (
@@ -163,13 +169,11 @@ export function ReleaseNotesForm() {
                                     Changelog
                                 </FormLabel>
                                 <FormControl>
-                                    <Textarea
+                                    <ChangelogTextArea
                                         placeholder="Enter the changelog details..."
                                         className="min-h-[200px] font-mono"
                                         disabled={form.formState.isSubmitting}
-                                        maxLength={calculateMaxLength(
-                                            previewData,
-                                        )}
+                                        control={form.control}
                                         {...field}
                                     />
                                 </FormControl>
@@ -232,7 +236,7 @@ export function ReleaseNotesForm() {
                                             // mp4
                                             "video/mp4",
 
-                                            "image/webp,image/png,image/jpeg,image/jpg,image/gif,video/mp4,video",
+                                            // "image/webp,image/png,image/jpeg,image/jpg,image/gif,video/mp4,video",
                                         ].join(",")}
                                         onFileReject={(file, message) => {
                                             toast.warning(message, {
@@ -310,31 +314,20 @@ export function ReleaseNotesForm() {
                                 <span className="font-semibold">
                                     Remaining Characters:
                                 </span>{" "}
-                                <span>
-                                    {calculateRemainingLength(
-                                        previewData,
-                                    ).toLocaleString()}
-                                </span>
+                                <RemainingCharacters control={form.control} />
                             </p>
                             <p>
                                 <span className="font-semibold">
                                     Total Bytes:
                                 </span>{" "}
-                                <span>
-                                    {xbytes(
-                                        calculateTotalFileSize(
-                                            form.getValues().files,
-                                        ),
-                                        { iec: true },
-                                    )}
-                                </span>
+                                <TotalBytes control={form.control} />
                             </p>
                         </div>
                     </div>
                 </form>
             </Form>
 
-            <MarkdownPreview {...previewData} />
+            <MarkdownPreview control={form.control} />
         </div>
     );
 }

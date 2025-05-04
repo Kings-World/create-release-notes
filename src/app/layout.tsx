@@ -33,7 +33,7 @@ export default function RootLayout({
         >
             <body className="min-h-svh antialiased">
                 <main className="flex-1">{children}</main>
-                <Toaster richColors />
+                <Toaster richColors closeButton />
             </body>
         </html>
     );
