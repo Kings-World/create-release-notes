@@ -3,5 +3,9 @@
     "editor.formatOnSave": true,
     "typescript.tsdk": "node_modules/typescript/lib",
     "typescript.enablePromptUseWorkspaceTsdk": true,
-    "typescript.preferences.autoImportFileExcludePatterns": ["@radix-ui/*"]
+    "typescript.preferences.autoImportFileExcludePatterns": ["@radix-ui/*"],
+    "sonarlint.connectedMode.project": {
+        "connectionId": "kings-world",
+        "projectKey": "Kings-World_create-release-notes"
+    }
 }
