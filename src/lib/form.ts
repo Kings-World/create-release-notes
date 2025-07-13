@@ -11,7 +11,7 @@ export const formSchema = z.object({
         .string()
         .min(1, "Please enter a version")
         .refine((value) => semver.valid(value), {
-            message: "The version must be valid semver",
+            error: "The version must be valid semver",
         }),
     changelog: z
         .string()
@@ -21,10 +21,10 @@ export const formSchema = z.object({
             `The changelog must be less than ${componentMaxLength} characters`,
         )
         .refine((value) => value !== changelogPresetValue, {
-            message: "Please enter changes in the changelog",
+            error: "Please enter changes in the changelog",
         }),
     secretKey: z.string().min(1, "Please enter the secret key"),
-    files: z.array(z.custom<File>()).max(10, "You can only upload 10 files"),
+    files: z.array(z.file()).max(10, "You can only upload 10 files"),
 });
 
 export type FormSchema = z.infer<typeof formSchema>;
