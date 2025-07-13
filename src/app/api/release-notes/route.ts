@@ -3,19 +3,19 @@ import { env } from "@/lib/env";
 import { formSchema } from "@/lib/form";
 import { sendWebhookMessage } from "@/lib/webhook";
 import { NextResponse, type NextRequest } from "next/server";
-import { fromZodError } from "zod-validation-error";
+import { prettifyError } from "zod";
 
 const refinedFormSchema = formSchema
     .refine(
         (data) =>
             data.changelog.length <=
             calculateMaxLength(data.project, data.version),
-        (data) => ({
-            message: `The changelog must be less than ${calculateMaxLength(data.project, data.version)} characters`,
-        }),
+        {
+            error: "The changelog is too long",
+        },
     )
     .refine((data) => data.secretKey === env.SECRET_KEY, {
-        message: "Invalid secret key",
+        error: "Invalid secret key",
     });
 
 export async function POST(request: NextRequest) {
@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json(
             {
                 success: false,
-                message: fromZodError(parsed.error).toString(),
+                message: prettifyError(parsed.error),
             },
             { status: 400 },
         );

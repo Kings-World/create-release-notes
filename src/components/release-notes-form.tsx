@@ -36,7 +36,6 @@ import {
 } from "./ui/file-upload";
 import { discordAttachmentSizeLimit } from "@/lib/utils";
 import { z } from "zod";
-import { fromZodError } from "zod-validation-error";
 import { ChangelogTextArea } from "./release-notes/changelog-text-area";
 import { RemainingCharacters } from "./release-notes/remaining-characters";
 import { TotalBytes } from "./release-notes/total-bytes";
@@ -80,7 +79,7 @@ export function ReleaseNotesForm() {
         const result = await res.json();
         const parsed = apiResultSchema.safeParse(result);
         if (!parsed.success) {
-            toast.error(fromZodError(parsed.error).toString(), { id });
+            toast.error(z.prettifyError(parsed.error), { id });
             return;
         }
 

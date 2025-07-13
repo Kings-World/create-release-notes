@@ -3118,7 +3118,6 @@ __metadata:
     typescript: "npm:^5.8.3"
     xbytes: "npm:^1.9.1"
     zod: "npm:^4.0.5"
-    zod-validation-error: "npm:^3.5.3"
   languageName: unknown
   linkType: soft
 
@@ -8062,15 +8061,6 @@ __metadata:
   version: 1.2.1
   resolution: "yocto-queue@npm:1.2.1"
   checksum: 10/0843d6c2c0558e5c06e98edf9c17942f25c769e21b519303a5c2adefd5b738c9b2054204dc856ac0cd9d134b1bc27d928ce84fd23c9e2423b7e013d5a6f50577
-  languageName: node
-  linkType: hard
-
-"zod-validation-error@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "zod-validation-error@npm:3.5.3"
-  peerDependencies:
-    zod: ^3.25.0 || ^4.0.0
-  checksum: 10/f550565ffb2a0a1733616d856302184dbe2080ec649ff9361125467065c3dfa02aeb5bf399605cdb61fe640f79ff1fe8ad0805f6e0c8144fa34764cad58f4401
   languageName: node
   linkType: hard
 
