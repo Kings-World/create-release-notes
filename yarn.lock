@@ -791,14 +791,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/resolvers@npm:^5.2.1":
-  version: 5.2.1
-  resolution: "@hookform/resolvers@npm:5.2.1"
+"@hookform/resolvers@npm:^5.2.2":
+  version: 5.2.2
+  resolution: "@hookform/resolvers@npm:5.2.2"
   dependencies:
     "@standard-schema/utils": "npm:^0.3.0"
   peerDependencies:
     react-hook-form: ^7.55.0
-  checksum: 10/9accc49f668209b58a4db5f410ab629d55fb9ac19d3cc6a591df9742a869286e1b929f117f419accaeb302a5941bf22f7e6da9c8b06cdb1104f57ac1a2a11c7e
+  checksum: 10/93447287dc89827c517c72dc61e3be0217d3a5d9cbdb532317e5f5fd176c3eedb2ccd62d3c51fb403812939c9b7a4ebcaca35659a9bfb90e16ec38a2092d13a2
   languageName: node
   linkType: hard
 
@@ -3084,7 +3084,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^19.8.1"
     "@discordjs/core": "npm:^2.2.2"
     "@eslint/eslintrc": "npm:^3.3.1"
-    "@hookform/resolvers": "npm:^5.2.1"
+    "@hookform/resolvers": "npm:^5.2.2"
     "@radix-ui/react-label": "npm:^2.1.7"
     "@radix-ui/react-select": "npm:^2.2.6"
     "@radix-ui/react-separator": "npm:^1.1.7"
