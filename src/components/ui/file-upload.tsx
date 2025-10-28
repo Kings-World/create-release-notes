@@ -764,6 +764,7 @@ const FileUploadDropzone = React.forwardRef<
                 dataTransfer.items.add(file);
             }
 
+            // eslint-disable-next-line react-hooks/immutability
             inputElement.files = dataTransfer.files;
             inputElement.dispatchEvent(new Event("change", { bubbles: true }));
         },
@@ -803,6 +804,7 @@ const FileUploadDropzone = React.forwardRef<
                 dataTransfer.items.add(file);
             }
 
+            // eslint-disable-next-line react-hooks/immutability
             inputElement.files = dataTransfer.files;
             inputElement.dispatchEvent(new Event("change", { bubbles: true }));
         },
