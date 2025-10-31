@@ -303,6 +303,7 @@ export function ReleaseNotesForm() {
                                         name={field.name}
                                         placeholder="Enter secret key"
                                         aria-invalid={fieldState.invalid}
+                                        type="password"
                                     />
                                 )}
                             />
