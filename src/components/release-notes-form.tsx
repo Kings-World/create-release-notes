@@ -49,6 +49,7 @@ import { Spinner } from "./ui/spinner";
 import { RemainingCharacters } from "./release-notes/remaining-characters";
 import { TotalBytes } from "./release-notes/total-bytes";
 import { sendWebhookMessage } from "@/lib/webhook";
+import { ChangelogTextArea } from "./release-notes/changelog-text-area";
 
 export function ReleaseNotesForm() {
     const form = useForm<FormSchema>({
@@ -168,6 +169,9 @@ export function ReleaseNotesForm() {
                                                 aria-invalid={
                                                     fieldState.invalid
                                                 }
+                                                maxLength={ChangelogTextArea({
+                                                    control: form.control,
+                                                })}
                                             />
                                             <InputGroupAddon align="block-end">
                                                 <InputGroupText className="gap-1 text-xs">
