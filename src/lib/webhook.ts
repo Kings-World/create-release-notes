@@ -1,3 +1,4 @@
+"use server";
 import "server-only";
 
 import {
@@ -12,14 +13,35 @@ import {
 import { REST, type RawFile } from "@discordjs/rest";
 import { nanoid } from "nanoid";
 
-import type { FormSchema } from "./form";
-import { getProjectHeader, message, sections } from "./discord";
+import { formSchema, type FormSchema } from "./form-schema";
+import {
+    calculateMaxLength,
+    getProjectHeader,
+    message,
+    sections,
+} from "./discord";
 import { env } from "./env";
+import { prettifyError } from "zod";
 
 const rest = new REST({ version: "10" });
 const api = new API(rest);
 
 export async function sendWebhookMessage(data: FormSchema) {
+    const parsed = formSchema.safeParse(data);
+    if (!parsed.success) {
+        throw new Error(prettifyError(parsed.error));
+    }
+
+    if (
+        data.changelog.length > calculateMaxLength(data.project, data.version)
+    ) {
+        throw new Error("Changelog is too long");
+    }
+
+    if (data.secretKey !== env.SECRET_KEY) {
+        throw new Error("Invalid secret key");
+    }
+
     const files =
         data.files.length > 0
             ? await Promise.all(

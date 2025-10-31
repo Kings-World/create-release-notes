@@ -1,4 +1,4 @@
-import type { FormSchema } from "@/lib/form";
+import type { FormSchema } from "@/lib/form-schema";
 import { useWatch, type Control } from "react-hook-form";
 import { Textarea } from "../ui/textarea";
 import { calculateMaxLength } from "@/lib/discord";

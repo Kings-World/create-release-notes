@@ -1,5 +1,5 @@
 import { getProjectEmoji } from "@/lib/discord";
-import type { FormSchema } from "@/lib/form";
+import type { FormSchema } from "@/lib/form-schema";
 import { type Control, useWatch } from "react-hook-form";
 import NextImage from "next/image";
 

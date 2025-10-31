@@ -1,4 +1,4 @@
-import type { FormSchema } from "@/lib/form";
+import type { FormSchema } from "@/lib/form-schema";
 import { type Control, useWatch } from "react-hook-form";
 
 export function ProjectAndVersion({

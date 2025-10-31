@@ -1,4 +1,4 @@
-import type { PreviewData } from "./form";
+import type { PreviewData } from "./form-schema";
 
 export const message =
     "<@&1294334876803137536> A new update to Kings Beta has been released!";
