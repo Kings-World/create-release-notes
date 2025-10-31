@@ -23,6 +23,7 @@ export function MarkdownPreview({
                     "prose dark:prose-invert prose-sm prose-neutral max-w-none",
                     "prose-h1:mb-2",
                     "prose-h2:mb-2 prose-h2:first-of-type:mt-0 prose-h2:mt-4",
+                    "overflow-hidden wrap-break-word",
                 )}
             >
                 <h1 className="inline-flex items-center gap-1.5">
