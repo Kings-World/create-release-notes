@@ -170,11 +170,11 @@ export function ReleaseNotesForm() {
                                                 }
                                             />
                                             <InputGroupAddon align="block-end">
-                                                <InputGroupText className="text-xs">
+                                                <InputGroupText className="gap-1 text-xs">
                                                     <RemainingCharacters
                                                         control={form.control}
-                                                    />{" "}
-                                                    characters left
+                                                    />
+                                                    <span>characters left</span>
                                                 </InputGroupText>
                                             </InputGroupAddon>
                                         </InputGroup>
