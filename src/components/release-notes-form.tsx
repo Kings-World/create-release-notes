@@ -70,7 +70,6 @@ export function ReleaseNotesForm() {
                 return "Published successfully!";
             },
             error: (e) => `Failed to publish release notes: ${e.message}`,
-            position: "top-right",
         });
     }
 
