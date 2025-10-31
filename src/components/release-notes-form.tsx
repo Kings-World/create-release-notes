@@ -110,7 +110,7 @@ export function ReleaseNotesForm() {
                                             </SelectContent>
                                         </Select>
                                         <FieldDescription>
-                                            Select the project for this release
+                                            Select the project for this release.
                                         </FieldDescription>
                                         {fieldState.invalid && (
                                             <FieldError
@@ -139,7 +139,7 @@ export function ReleaseNotesForm() {
                                         />
                                         <FieldDescription>
                                             Specify the version number for this
-                                            release
+                                            release.
                                         </FieldDescription>
                                         {fieldState.invalid && (
                                             <FieldError
