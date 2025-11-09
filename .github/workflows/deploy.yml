@@ -22,7 +22,7 @@ jobs:
       #   uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3
 
       - name: Setup Docker Builder
-        uses: useblacksmith/setup-docker-builder@78f41686563c732ccc097f7baac2f092f67538f0 # v1
+        uses: useblacksmith/setup-docker-builder@affa10db466676f3dfb3e54caeb228ee0691510f # v1
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
