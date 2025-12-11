@@ -10,7 +10,7 @@ ENV YARN_DISABLE_GIT_HOOKS=1
 COPY .yarn/ .yarn/
 COPY package.json yarn.lock .yarnrc.yml ./
 
-RUN --mount=type=cache,target=/root/.yarn yarn --immutable
+RUN --mount=type=cache,id=yarn,target=/root/.yarn yarn install --immutable
 
 FROM base AS builder
 WORKDIR /app
@@ -21,7 +21,7 @@ ENV NEXT_TELEMETRY_DISABLED=1 \
     NODE_ENV=production \
     CI=true
 
-RUN --mount=type=cache,target=/app/.next/cache yarn build
+RUN --mount=type=cache,id=nextjs,target=/app/.next/cache yarn build
 
 FROM base AS runner
 WORKDIR /app
