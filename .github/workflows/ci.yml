@@ -12,6 +12,9 @@ env:
   NEXT_TELEMETRY_DISABLED: 1
   CI: true
 
+permissions:
+  contents: read
+
 jobs:
   typecheck:
     name: Type Checking
