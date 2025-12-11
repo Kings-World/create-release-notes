@@ -12,6 +12,8 @@ jobs:
   title:
     name: Title Validation
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout Project
         uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
