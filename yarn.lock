@@ -1861,14 +1861,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@t3-oss/env-core@npm:0.13.8":
-  version: 0.13.8
-  resolution: "@t3-oss/env-core@npm:0.13.8"
+"@t3-oss/env-core@npm:0.13.10":
+  version: 0.13.10
+  resolution: "@t3-oss/env-core@npm:0.13.10"
   peerDependencies:
     arktype: ^2.1.0
     typescript: ">=5.0.0"
     valibot: ^1.0.0-beta.7 || ^1.0.0
-    zod: ^3.24.0 || ^4.0.0-beta.0
+    zod: ^3.24.0 || ^4.0.0
   peerDependenciesMeta:
     arktype:
       optional: true
@@ -1878,20 +1878,20 @@ __metadata:
       optional: true
     zod:
       optional: true
-  checksum: 10/2feccc3bed60166bd1c2d7d1384d61c1571b9adb3a3db9f39b645916f22fc33d7555988ce81de6f3ab6b81f198957012f6360be2e4df7114499a95fc6f86aadd
+  checksum: 10/eb34500c94d64a4e4bd812c4cd43f27e7f1c97499b4d563d56a87e3cfc37b311e7187884d9a384639fe664ed944ed937d30040d369d52acbd8f0e9941b7f3662
   languageName: node
   linkType: hard
 
-"@t3-oss/env-nextjs@npm:^0.13.8":
-  version: 0.13.8
-  resolution: "@t3-oss/env-nextjs@npm:0.13.8"
+"@t3-oss/env-nextjs@npm:^0.13.10":
+  version: 0.13.10
+  resolution: "@t3-oss/env-nextjs@npm:0.13.10"
   dependencies:
-    "@t3-oss/env-core": "npm:0.13.8"
+    "@t3-oss/env-core": "npm:0.13.10"
   peerDependencies:
     arktype: ^2.1.0
     typescript: ">=5.0.0"
     valibot: ^1.0.0-beta.7 || ^1.0.0
-    zod: ^3.24.0 || ^4.0.0-beta.0
+    zod: ^3.24.0 || ^4.0.0
   peerDependenciesMeta:
     arktype:
       optional: true
@@ -1901,7 +1901,7 @@ __metadata:
       optional: true
     zod:
       optional: true
-  checksum: 10/92988ab840e229cfd01d6bcd59fc42a3ce88276f65b0abb8848d97c7a867f6e6ecc7dcf52803b23ecf2bf3cc9320311600a7852e7d1f6a6ea2950b55ea371f14
+  checksum: 10/169433784fc04c13acb797f70336031f0ce31da95a2ddf68c5e533faca64b5d6972680ca001d39b91c95b939142930bab27d0a5230bcecec4d0939d737a549d9
   languageName: node
   linkType: hard
 
@@ -3128,7 +3128,7 @@ __metadata:
     "@radix-ui/react-select": "npm:^2.2.6"
     "@radix-ui/react-separator": "npm:^1.1.8"
     "@radix-ui/react-slot": "npm:^1.2.4"
-    "@t3-oss/env-nextjs": "npm:^0.13.8"
+    "@t3-oss/env-nextjs": "npm:^0.13.10"
     "@tailwindcss/postcss": "npm:^4.1.18"
     "@tailwindcss/typography": "npm:^0.5.19"
     "@types/node": "npm:^24.10.4"
