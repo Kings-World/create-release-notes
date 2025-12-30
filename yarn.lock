@@ -3149,7 +3149,7 @@ __metadata:
     pretty-quick: "npm:^4.2.2"
     react: "npm:^19.2.3"
     react-dom: "npm:^19.2.3"
-    react-hook-form: "npm:^7.68.0"
+    react-hook-form: "npm:^7.69.0"
     react-markdown: "npm:^10.1.0"
     react-scan: "npm:^0.4.3"
     semver: "npm:^7.7.3"
@@ -6549,12 +6549,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.68.0":
-  version: 7.68.0
-  resolution: "react-hook-form@npm:7.68.0"
+"react-hook-form@npm:^7.69.0":
+  version: 7.69.0
+  resolution: "react-hook-form@npm:7.69.0"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18 || ^19
-  checksum: 10/c9624924cd324ee5560de51715361d754d24591734b1cf2b87c95477d35f5ca01b10e94d477bebe215afd37914c5cdbd4a717ead910d8de67f346f517f5a8d92
+  checksum: 10/12a8b90d337c557cb53cfb6c9fd7ed3972a20960834b060bb239101a2765cd762ef6651b3231feb0932d3582d51801fda57bc660bfac88688b538b6609e4a1ec
   languageName: node
   linkType: hard
 
