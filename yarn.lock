@@ -1831,9 +1831,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@t3-oss/env-core@npm:0.13.10":
-  version: 0.13.10
-  resolution: "@t3-oss/env-core@npm:0.13.10"
+"@t3-oss/env-core@npm:0.13.11":
+  version: 0.13.11
+  resolution: "@t3-oss/env-core@npm:0.13.11"
   peerDependencies:
     arktype: ^2.1.0
     typescript: ">=5.0.0"
@@ -1848,15 +1848,15 @@ __metadata:
       optional: true
     zod:
       optional: true
-  checksum: 10/eb34500c94d64a4e4bd812c4cd43f27e7f1c97499b4d563d56a87e3cfc37b311e7187884d9a384639fe664ed944ed937d30040d369d52acbd8f0e9941b7f3662
+  checksum: 10/35a1f60a55a5c36574543127ac0755d15d417bd8fa6e7c2e25a931a02711172664dfa45f293b23d5970d0c8efe6cc1298b9b91aedc7fcc77dba46ebe4b46461c
   languageName: node
   linkType: hard
 
-"@t3-oss/env-nextjs@npm:^0.13.10":
-  version: 0.13.10
-  resolution: "@t3-oss/env-nextjs@npm:0.13.10"
+"@t3-oss/env-nextjs@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "@t3-oss/env-nextjs@npm:0.13.11"
   dependencies:
-    "@t3-oss/env-core": "npm:0.13.10"
+    "@t3-oss/env-core": "npm:0.13.11"
   peerDependencies:
     arktype: ^2.1.0
     typescript: ">=5.0.0"
@@ -1871,7 +1871,7 @@ __metadata:
       optional: true
     zod:
       optional: true
-  checksum: 10/169433784fc04c13acb797f70336031f0ce31da95a2ddf68c5e533faca64b5d6972680ca001d39b91c95b939142930bab27d0a5230bcecec4d0939d737a549d9
+  checksum: 10/8241a5b1d6d03b1e0428623accd05623f9efc92acdeea079b0e8feb86a8723aa6796441e2f03371acd36ea7be31daeaee2b9c437b226732a78d300f04c40a00f
   languageName: node
   linkType: hard
 
@@ -3029,7 +3029,7 @@ __metadata:
     "@radix-ui/react-select": "npm:^2.2.6"
     "@radix-ui/react-separator": "npm:^1.1.8"
     "@radix-ui/react-slot": "npm:^1.2.4"
-    "@t3-oss/env-nextjs": "npm:^0.13.10"
+    "@t3-oss/env-nextjs": "npm:^0.13.11"
     "@tailwindcss/postcss": "npm:^4.2.2"
     "@tailwindcss/typography": "npm:^0.5.19"
     "@types/node": "npm:^24.12.0"
