@@ -187,7 +187,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:^20.5.0":
+"@commitlint/cli@npm:20.5.0":
   version: 20.5.0
   resolution: "@commitlint/cli@npm:20.5.0"
   dependencies:
@@ -204,7 +204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^20.5.0":
+"@commitlint/config-conventional@npm:20.5.0":
   version: 20.5.0
   resolution: "@commitlint/config-conventional@npm:20.5.0"
   dependencies:
@@ -2026,7 +2026,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/postcss@npm:^4.2.4":
+"@tailwindcss/postcss@npm:4.2.4":
   version: 4.2.4
   resolution: "@tailwindcss/postcss@npm:4.2.4"
   dependencies:
@@ -2039,7 +2039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/typography@npm:^0.5.19":
+"@tailwindcss/typography@npm:0.5.19":
   version: 0.5.19
   resolution: "@tailwindcss/typography@npm:0.5.19"
   dependencies:
@@ -2123,7 +2123,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^24.12.2":
+"@types/node@npm:*, @types/node@npm:24.12.2":
   version: 24.12.2
   resolution: "@types/node@npm:24.12.2"
   dependencies:
@@ -2168,7 +2168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/semver@npm:^7.7.1":
+"@types/semver@npm:7.7.1":
   version: 7.7.1
   resolution: "@types/semver@npm:7.7.1"
   checksum: 10/8f09e7e6ca3ded67d78ba7a8f7535c8d9cf8ced83c52e7f3ac3c281fe8c689c3fe475d199d94390dc04fc681d51f2358b430bb7b2e21c62de24f2bee2c719068
@@ -3021,8 +3021,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "create-release-notes@workspace:."
   dependencies:
-    "@commitlint/cli": "npm:^20.5.0"
-    "@commitlint/config-conventional": "npm:^20.5.0"
+    "@commitlint/cli": "npm:20.5.0"
+    "@commitlint/config-conventional": "npm:20.5.0"
     "@discordjs/core": "npm:^2.4.0"
     "@hookform/resolvers": "npm:^5.2.2"
     "@radix-ui/react-label": "npm:^2.1.8"
@@ -3030,36 +3030,36 @@ __metadata:
     "@radix-ui/react-separator": "npm:^1.1.8"
     "@radix-ui/react-slot": "npm:^1.2.4"
     "@t3-oss/env-nextjs": "npm:^0.13.11"
-    "@tailwindcss/postcss": "npm:^4.2.4"
-    "@tailwindcss/typography": "npm:^0.5.19"
-    "@types/node": "npm:^24.12.2"
+    "@tailwindcss/postcss": "npm:4.2.4"
+    "@tailwindcss/typography": "npm:0.5.19"
+    "@types/node": "npm:24.12.2"
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
-    "@types/semver": "npm:^7.7.1"
+    "@types/semver": "npm:7.7.1"
     class-variance-authority: "npm:^0.7.1"
     clsx: "npm:^2.1.1"
-    eslint: "npm:^9.39.4"
+    eslint: "npm:9.39.4"
     eslint-config-next: "npm:16.2.4"
-    eslint-config-prettier: "npm:^10.1.8"
+    eslint-config-prettier: "npm:10.1.8"
     lucide-react: "npm:^1.9.0"
     nanoid: "npm:^5.1.9"
     next: "npm:^16.2.4"
     next-themes: "npm:^0.4.6"
-    prettier: "npm:^3.8.3"
-    prettier-plugin-tailwindcss: "npm:^0.7.3"
-    pretty-quick: "npm:^4.2.2"
+    prettier: "npm:3.8.3"
+    prettier-plugin-tailwindcss: "npm:0.7.3"
+    pretty-quick: "npm:4.2.2"
     react: "npm:^19.2.5"
     react-dom: "npm:^19.2.5"
     react-hook-form: "npm:^7.73.1"
     react-markdown: "npm:^10.1.0"
-    react-scan: "npm:^0.5.3"
+    react-scan: "npm:0.5.3"
     semver: "npm:^7.7.4"
     server-only: "npm:^0.0.1"
     sonner: "npm:^2.0.7"
     tailwind-merge: "npm:^3.5.0"
-    tailwindcss: "npm:^4.2.4"
-    tw-animate-css: "npm:^1.4.0"
-    typescript: "npm:^6.0.3"
+    tailwindcss: "npm:4.2.4"
+    tw-animate-css: "npm:1.4.0"
+    typescript: "npm:6.0.3"
     xbytes: "npm:^1.9.1"
     zod: "npm:^4.3.6"
   languageName: unknown
@@ -3568,7 +3568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^10.1.8":
+"eslint-config-prettier@npm:10.1.8":
   version: 10.1.8
   resolution: "eslint-config-prettier@npm:10.1.8"
   peerDependencies:
@@ -3747,7 +3747,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.39.4":
+"eslint@npm:9.39.4":
   version: 9.39.4
   resolution: "eslint@npm:9.39.4"
   dependencies:
@@ -5858,7 +5858,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.7.3":
+"prettier-plugin-tailwindcss@npm:0.7.3":
   version: 0.7.3
   resolution: "prettier-plugin-tailwindcss@npm:0.7.3"
   peerDependencies:
@@ -5916,7 +5916,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.8.3":
+"prettier@npm:3.8.3":
   version: 3.8.3
   resolution: "prettier@npm:3.8.3"
   bin:
@@ -5925,7 +5925,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-quick@npm:^4.2.2":
+"pretty-quick@npm:4.2.2":
   version: 4.2.2
   resolution: "pretty-quick@npm:4.2.2"
   dependencies:
@@ -6070,7 +6070,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-scan@npm:^0.5.3":
+"react-scan@npm:0.5.3":
   version: 0.5.3
   resolution: "react-scan@npm:0.5.3"
   dependencies:
@@ -6761,7 +6761,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.2.4, tailwindcss@npm:^4.2.4":
+"tailwindcss@npm:4.2.4":
   version: 4.2.4
   resolution: "tailwindcss@npm:4.2.4"
   checksum: 10/54734efe725d1717fb9064940d705852448fb91a7fc78399a2d4263dc0fd4c260017baa13362f13f604bbfd4a0a882b83253c0cd6f14fe80454fd916966e8d72
@@ -6850,7 +6850,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tw-animate-css@npm:^1.4.0":
+"tw-animate-css@npm:1.4.0":
   version: 1.4.0
   resolution: "tw-animate-css@npm:1.4.0"
   checksum: 10/9d46c71b624bc7f9cf7a91c0ab3a04cfb22ba605a690961eea35689e368a8721add12815f59aa0fbf7092374acb24552f281351a83bf8b25414c52f4888f94ad
@@ -6934,7 +6934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^6.0.3":
+"typescript@npm:6.0.3":
   version: 6.0.3
   resolution: "typescript@npm:6.0.3"
   bin:
@@ -6944,7 +6944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^6.0.3#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>":
   version: 6.0.3
   resolution: "typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"
   bin:
