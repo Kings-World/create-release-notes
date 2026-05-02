@@ -2141,7 +2141,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^19.2.3":
+"@types/react-dom@npm:19.2.3":
   version: 19.2.3
   resolution: "@types/react-dom@npm:19.2.3"
   peerDependencies:
@@ -2159,7 +2159,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19.2.14":
+"@types/react@npm:19.2.14":
   version: 19.2.14
   resolution: "@types/react@npm:19.2.14"
   dependencies:
@@ -3033,8 +3033,8 @@ __metadata:
     "@tailwindcss/postcss": "npm:4.2.4"
     "@tailwindcss/typography": "npm:0.5.19"
     "@types/node": "npm:24.12.2"
-    "@types/react": "npm:^19.2.14"
-    "@types/react-dom": "npm:^19.2.3"
+    "@types/react": "npm:19.2.14"
+    "@types/react-dom": "npm:19.2.3"
     "@types/semver": "npm:7.7.1"
     class-variance-authority: "npm:^0.7.1"
     clsx: "npm:^2.1.1"
