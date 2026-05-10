@@ -984,12 +984,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:16.2.5":
-  version: 16.2.5
-  resolution: "@next/eslint-plugin-next@npm:16.2.5"
+"@next/eslint-plugin-next@npm:16.2.6":
+  version: 16.2.6
+  resolution: "@next/eslint-plugin-next@npm:16.2.6"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10/b2d29783aeddf21b909c2d724b052407c24119cf9b5c07840309a60ef89762cc3b74937de27ff3ed37e357285b33041bbc449096a9b0eca777fb084fa8c5a942
+  checksum: 10/2ee412966d41ac2072dd470a2a6f6ea178d26ead45ea5d4f24b248e81e1bea4d5b2ab8d268f0605f901b4b20401e264cd4e67a6770b474b56e66da50d88b6458
   languageName: node
   linkType: hard
 
@@ -2949,11 +2949,11 @@ __metadata:
     class-variance-authority: "npm:^0.7.1"
     clsx: "npm:^2.1.1"
     eslint: "npm:9.39.4"
-    eslint-config-next: "npm:16.2.5"
+    eslint-config-next: "npm:16.2.6"
     eslint-config-prettier: "npm:10.1.8"
     lucide-react: "npm:^1.14.0"
     nanoid: "npm:^5.1.11"
-    next: "npm:^16.2.5"
+    next: "npm:^16.2.6"
     next-themes: "npm:^0.4.6"
     prettier: "npm:3.8.3"
     prettier-plugin-tailwindcss: "npm:0.8.0"
@@ -3381,11 +3381,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:16.2.5":
-  version: 16.2.5
-  resolution: "eslint-config-next@npm:16.2.5"
+"eslint-config-next@npm:16.2.6":
+  version: 16.2.6
+  resolution: "eslint-config-next@npm:16.2.6"
   dependencies:
-    "@next/eslint-plugin-next": "npm:16.2.5"
+    "@next/eslint-plugin-next": "npm:16.2.6"
     eslint-import-resolver-node: "npm:^0.3.6"
     eslint-import-resolver-typescript: "npm:^3.5.2"
     eslint-plugin-import: "npm:^2.32.0"
@@ -3400,7 +3400,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/4bd56e7767578f9e6840b813fe3d993b1f2edf3a53fa3181b2a41e8356b7b91e45d0ccc0e91806776a94e5533b0020bd559c16ba1aa9c48ef8bac0e058708bad
+  checksum: 10/782d0e7b852f88f0ec2287c3581d8226e0b7331386bc325105e455a5f857fb18879e34f13e9fdedd7e083f6ce07d6cd19a3e524ee5a4d3e48ddf6c8ead99617c
   languageName: node
   linkType: hard
 
@@ -5370,7 +5370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^16.2.5":
+"next@npm:^16.2.6":
   version: 16.2.6
   resolution: "next@npm:16.2.6"
   dependencies:
