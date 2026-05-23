@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 9
+  version: 10
   cacheKey: 10
 
 "@alloc/quick-lru@npm:^5.2.0":
@@ -1992,12 +1992,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.2.14":
-  version: 19.2.14
-  resolution: "@types/react@npm:19.2.14"
+"@types/react@npm:19.2.15":
+  version: 19.2.15
+  resolution: "@types/react@npm:19.2.15"
   dependencies:
     csstype: "npm:^3.2.2"
-  checksum: 10/fbff239089ee64b6bd9b00543594db498278b06de527ef1b0f71bb0eb09cc4445a71b5dd3c0d3d0257255c4eed94406be40a74ad4a987ade8a8d5dd65c82bc5f
+  checksum: 10/f77447366a94804feea450568f7ebdadc00155457b4c74240972a73601294b09f45cac4e1a28aa97bc01da9ed130bb5fe9a687835d4da6307d457f92530acc3a
   languageName: node
   linkType: hard
 
@@ -2921,7 +2921,7 @@ __metadata:
     "@tailwindcss/postcss": "npm:4.3.0"
     "@tailwindcss/typography": "npm:0.5.19"
     "@types/node": "npm:24.12.4"
-    "@types/react": "npm:19.2.14"
+    "@types/react": "npm:19.2.15"
     "@types/react-dom": "npm:19.2.3"
     "@types/semver": "npm:7.7.1"
     class-variance-authority: "npm:^0.7.1"
@@ -2929,7 +2929,7 @@ __metadata:
     eslint: "npm:9.39.4"
     eslint-config-next: "npm:16.2.6"
     eslint-config-prettier: "npm:10.1.8"
-    lucide-react: "npm:^1.14.0"
+    lucide-react: "npm:^1.16.0"
     nanoid: "npm:^5.1.11"
     next: "npm:^16.2.6"
     next-themes: "npm:^0.4.6"
@@ -2938,7 +2938,7 @@ __metadata:
     pretty-quick: "npm:4.2.2"
     react: "npm:^19.2.6"
     react-dom: "npm:^19.2.6"
-    react-hook-form: "npm:^7.75.0"
+    react-hook-form: "npm:^7.76.0"
     react-markdown: "npm:^10.1.0"
     react-scan: "npm:0.5.6"
     semver: "npm:^7.8.0"
@@ -4833,7 +4833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^1.14.0":
+"lucide-react@npm:^1.16.0":
   version: 1.16.0
   resolution: "lucide-react@npm:1.16.0"
   peerDependencies:
@@ -5859,12 +5859,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.75.0":
-  version: 7.76.0
-  resolution: "react-hook-form@npm:7.76.0"
+"react-hook-form@npm:^7.76.0":
+  version: 7.76.1
+  resolution: "react-hook-form@npm:7.76.1"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18 || ^19
-  checksum: 10/5561707e200bc1031de407e0f7b9e3625444eaeef91765182e7387654853d65314498db0dd2e290fead147453c5f42df6359ea16c674de2034cbb2a6327dcae2
+  checksum: 10/8fea83f62035b08acf55c0cdb712ad7c74ce120395e3b2ff3af7d3ac5cf9f3100f07a964bb16ffb5e5947dc08a4544a735a4d37d7ccfad5526dc535b83fe95a2
   languageName: node
   linkType: hard
 
