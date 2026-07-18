@@ -444,34 +444,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/core@npm:^2.5.0":
-  version: 2.5.0
-  resolution: "@discordjs/core@npm:2.5.0"
+"@discordjs/core@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "@discordjs/core@npm:2.6.0"
   dependencies:
-    "@discordjs/rest": "npm:^2.6.1"
+    "@discordjs/rest": "npm:^2.6.2"
     "@discordjs/util": "npm:^1.2.0"
     "@discordjs/ws": "npm:^2.0.4"
     "@sapphire/snowflake": "npm:^3.5.5"
     "@vladfrangu/async_event_emitter": "npm:^2.4.6"
-    discord-api-types: "npm:^0.38.48"
-  checksum: 10/11bc413e9cd7019c9ba4e41d0fb5f3c21d3832b00dfbe47c307a5c12ac391e94fd104da297e1bdc98287f50aae7829b4fe5beaf6fcdb457b5a245cff09a4e05e
+    discord-api-types: "npm:^0.38.50"
+  checksum: 10/aa44f98d0cbac36b0f031e907e8142cba1de1df81bb0b621e68911c434413a389a1f952ede50b92a7ca5eaff285b0fc9d49089bc3b99e7a5e15c0ad072b9bcfa
   languageName: node
   linkType: hard
 
-"@discordjs/rest@npm:^2.6.0, @discordjs/rest@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "@discordjs/rest@npm:2.6.1"
+"@discordjs/rest@npm:^2.6.0, @discordjs/rest@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "@discordjs/rest@npm:2.6.2"
   dependencies:
     "@discordjs/collection": "npm:^2.1.1"
     "@discordjs/util": "npm:^1.2.0"
     "@sapphire/async-queue": "npm:^1.5.3"
     "@sapphire/snowflake": "npm:^3.5.5"
     "@vladfrangu/async_event_emitter": "npm:^2.4.6"
-    discord-api-types: "npm:^0.38.40"
+    discord-api-types: "npm:^0.38.49"
     magic-bytes.js: "npm:^1.13.0"
     tslib: "npm:^2.6.3"
-    undici: "npm:6.24.1"
-  checksum: 10/d320930fda4d835f0c7898c4c3158d54992af004f6112bb57047bdae1a0d798c7b9ffee2a9db1ffc85685ebdd89ce7838c2d74c1761988f62689980c79c4f356
+    undici: "npm:^6.27.0"
+  checksum: 10/05de970e9c3e14a6faeb69d6f6b7a4002a8e8bfed2ac10888ad21db5248e9c660f3f47784345a0e38416e5587fe05e341d34e51592e3adfa62adf15f4614af36
   languageName: node
   linkType: hard
 
@@ -3821,7 +3821,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:21.2.1"
     "@commitlint/config-conventional": "npm:21.2.0"
-    "@discordjs/core": "npm:^2.5.0"
+    "@discordjs/core": "npm:^2.6.0"
     "@hookform/resolvers": "npm:^5.4.0"
     "@radix-ui/react-label": "npm:^2.1.11"
     "@radix-ui/react-select": "npm:^2.3.3"
@@ -4042,10 +4042,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:^0.38.32, discord-api-types@npm:^0.38.33, discord-api-types@npm:^0.38.40, discord-api-types@npm:^0.38.48":
-  version: 0.38.49
-  resolution: "discord-api-types@npm:0.38.49"
-  checksum: 10/31bf00dce0f1d5bf312a442b896d72c5455931a7b365642bbf2d2eca5728dbc28306dfc9a5811c67d04a484d2e6121eab2adc10db18e9e313ce67c875bdae27c
+"discord-api-types@npm:^0.38.32, discord-api-types@npm:^0.38.33, discord-api-types@npm:^0.38.49, discord-api-types@npm:^0.38.50":
+  version: 0.38.50
+  resolution: "discord-api-types@npm:0.38.50"
+  checksum: 10/ff4603da1242138b46a75358eb5268d3869dbfc6547df2e6dd1726a65db358e8f5974dee9cc48bfa38003ab1f269a8c3e9117b310f2d1b5b146365dea6a618c9
   languageName: node
   linkType: hard
 
@@ -8258,10 +8258,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:6.24.1":
-  version: 6.24.1
-  resolution: "undici@npm:6.24.1"
-  checksum: 10/4f84e6045520eef9ba8eabb96360b50c759f59905c1703b12187c2dbcc6d1584c5d7ecddeb45b0ed6cac84ca2d132b21bfd8a38f77fa30378b1ac5d2ae390fd9
+"undici@npm:^6.27.0":
+  version: 6.27.0
+  resolution: "undici@npm:6.27.0"
+  checksum: 10/30c18cdb235edf4dd36f8aa3ace1ffaf44060289a7d62ad44c33180d2d74a224015d25574812f62ce9c625b5beb1b0b766495b650fedf356aca11eed7ce2c816
   languageName: node
   linkType: hard
 
