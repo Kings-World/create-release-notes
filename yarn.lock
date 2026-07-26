@@ -3840,7 +3840,7 @@ __metadata:
     eslint: "npm:9.39.5"
     eslint-config-next: "npm:16.2.11"
     eslint-config-prettier: "npm:10.1.8"
-    lucide-react: "npm:^1.25.0"
+    lucide-react: "npm:^1.26.0"
     nanoid: "npm:^6.0.0"
     next: "npm:^16.2.11"
     next-themes: "npm:^0.4.6"
@@ -5835,7 +5835,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^1.25.0":
+"lucide-react@npm:^1.26.0":
   version: 1.26.0
   resolution: "lucide-react@npm:1.26.0"
   peerDependencies:
