@@ -3933,7 +3933,6 @@ __metadata:
     eslint-config-next: "npm:16.3.0"
     eslint-config-prettier: "npm:10.1.8"
     lucide-react: "npm:^1.31.0"
-    nanoid: "npm:^6.0.1"
     next: "npm:^16.3.0"
     next-themes: "npm:^0.4.6"
     prettier: "npm:3.9.6"
@@ -6417,15 +6416,6 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 10/54c3238ba6ea31c173ccf70922481814892075dbf1b4636abec249d0b34d5594fc9a8892c04872068674010a11fa3d18316dc06e59e700def131ff9d8e740426
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "nanoid@npm:6.0.1"
-  bin:
-    nanoid: bin/nanoid.js
-  checksum: 10/e49582351f6fff22c275a58504950e923b74c611fc1eac9589a98e89506270d2d1e3b61ed6429df6e7529e54ff71d9f0c5fbb1c540aaee81ae33a523e88ca668
   languageName: node
   linkType: hard
 
