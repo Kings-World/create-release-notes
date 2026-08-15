@@ -3932,7 +3932,7 @@ __metadata:
     eslint: "npm:9.39.5"
     eslint-config-next: "npm:16.3.0"
     eslint-config-prettier: "npm:10.1.8"
-    lucide-react: "npm:^1.29.0"
+    lucide-react: "npm:^1.31.0"
     nanoid: "npm:^6.0.1"
     next: "npm:^16.3.0"
     next-themes: "npm:^0.4.6"
@@ -3941,12 +3941,12 @@ __metadata:
     pretty-quick: "npm:4.2.2"
     react: "npm:^19.2.8"
     react-dom: "npm:^19.2.8"
-    react-hook-form: "npm:^7.84.0"
+    react-hook-form: "npm:^7.85.0"
     react-markdown: "npm:^10.1.0"
     react-scan: "npm:0.5.7"
     semver: "npm:^7.8.5"
     server-only: "npm:^0.0.1"
-    sonner: "npm:^2.0.7"
+    sonner: "npm:^2.0.8"
     tailwind-merge: "npm:^3.6.0"
     tailwindcss: "npm:4.3.3"
     tw-animate-css: "npm:1.4.0"
@@ -5927,12 +5927,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^1.29.0":
-  version: 1.30.0
-  resolution: "lucide-react@npm:1.30.0"
+"lucide-react@npm:^1.31.0":
+  version: 1.31.0
+  resolution: "lucide-react@npm:1.31.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10/54b95f19216f8fc7c6ae773928ce2717708263db25a339d5c8d89e62c6f64512fd4a50aa65a3cede4909ec05083c1ec3d1743e84f2d7ea89bf237e9cfeb8d1aa
+  checksum: 10/cc6a07b36d8db3fe9fcf48c41c47f9b2a3ff9f57832d0a78f4de2ada51381d052e06f51819e6bedcaadf34aea78d488800a91fcaee486c5139391309f4355b13
   languageName: node
   linkType: hard
 
@@ -7284,12 +7284,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.84.0":
-  version: 7.84.0
-  resolution: "react-hook-form@npm:7.84.0"
+"react-hook-form@npm:^7.85.0":
+  version: 7.85.0
+  resolution: "react-hook-form@npm:7.85.0"
   peerDependencies:
     react: ^16.8.0 || ^17 || ^18 || ^19
-  checksum: 10/68ba0fe1e3a9a874afe9798867ea5e954cfebe211fa2d853b9fd0f1542628d625c4df0c02099b2a421a1df4daea67c80783af7e0c3050ae81963bf1c35d1873f
+  checksum: 10/ab3c695866c6f803cb56ac71385a103f12879a72ca353b979b7d159e92cc54de721c988af8ff52ce3bca6181b50bb80e085567aae7819c7a7db1fcb1bfb2565d
   languageName: node
   linkType: hard
 
@@ -7841,13 +7841,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sonner@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "sonner@npm:2.0.7"
+"sonner@npm:^2.0.8":
+  version: 2.0.8
+  resolution: "sonner@npm:2.0.8"
   peerDependencies:
+    "@types/react": ^18.0.0 || ^19.0.0
     react: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
     react-dom: ^18.0.0 || ^19.0.0 || ^19.0.0-rc
-  checksum: 10/c80321646f7fe06f92f4c16da9d72a27aec34abbf41438f8d8e8292ba8546d6bb620c54a113928f049948db1ad29d0b2ad3e9cb29dd5802c30951b41c99f12c4
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10/7e46018c5e73885a1de5cf9aaa546e57db4ac230e48a815e90483aa26c7a517874b7ee315033d233c8258843dbcfdd5b6acd4302c65e968cac4d933274f15208
   languageName: node
   linkType: hard
 
