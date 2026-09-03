@@ -3623,6 +3623,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cn@npm:^0.2.4":
+  version: 0.2.4
+  resolution: "cn@npm:0.2.4"
+  bin:
+    cn: bin/cn.mjs
+  checksum: 10/75ca71e22caedadec6506563fe4351f4204fff1480c6e53608d15ae328df64998e46c35843ea13d0ac57013ee6865e4e7da5b7223b646bf9140bc5077efcc23e
+  languageName: node
+  linkType: hard
+
 "color-convert@npm:^2.0.1":
   version: 2.0.1
   resolution: "color-convert@npm:2.0.1"
@@ -3771,7 +3780,7 @@ __metadata:
     "@types/react-dom": "npm:19.2.5"
     "@types/semver": "npm:7.8.0"
     class-variance-authority: "npm:^0.7.1"
-    clsx: "npm:^2.1.1"
+    cn: "npm:^0.2.4"
     eslint: "npm:9.39.5"
     eslint-config-next: "npm:16.3.3"
     eslint-config-prettier: "npm:10.1.8"
@@ -3790,7 +3799,6 @@ __metadata:
     semver: "npm:^7.8.5"
     server-only: "npm:^0.0.1"
     sonner: "npm:^2.0.8"
-    tailwind-merge: "npm:^3.6.0"
     tailwindcss: "npm:4.3.3"
     tw-animate-css: "npm:1.4.0"
     typescript: "npm:6.0.3"
@@ -7991,13 +7999,6 @@ __metadata:
   version: 1.0.0
   resolution: "tagged-tag@npm:1.0.0"
   checksum: 10/e37653df3e495daa7ea7790cb161b810b00075bba2e4d6c93fb06a709e747e3ae9da11a120d0489833203926511b39e038a2affbd9d279cfb7a2f3fcccd30b5d
-  languageName: node
-  linkType: hard
-
-"tailwind-merge@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "tailwind-merge@npm:3.6.0"
-  checksum: 10/1da88698b6d878c391ab83064346e4b5b038d1b519d90825044df4b096971522c12253c7d6ab586c9da04e2039ba46573696138ea3d19c685d3c236f1f892899
   languageName: node
   linkType: hard
 
