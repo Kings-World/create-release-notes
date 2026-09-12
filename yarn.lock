@@ -3623,12 +3623,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cn@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "cn@npm:0.2.4"
+"cn@npm:^0.2.6":
+  version: 0.2.6
+  resolution: "cn@npm:0.2.6"
   bin:
     cn: bin/cn.mjs
-  checksum: 10/75ca71e22caedadec6506563fe4351f4204fff1480c6e53608d15ae328df64998e46c35843ea13d0ac57013ee6865e4e7da5b7223b646bf9140bc5077efcc23e
+  checksum: 10/ce986fe3625016b49e3cdb217217831ee2e7962b2e007b4b6d908562626f830aaf2b8446fcbcad14fbe7ddff66a9c9b1cd995168b1d83c268093b2b3fde667b9
   languageName: node
   linkType: hard
 
@@ -3780,11 +3780,11 @@ __metadata:
     "@types/react-dom": "npm:19.2.7"
     "@types/semver": "npm:7.8.0"
     class-variance-authority: "npm:^0.7.1"
-    cn: "npm:^0.2.4"
+    cn: "npm:^0.2.6"
     eslint: "npm:9.39.5"
     eslint-config-next: "npm:16.3.4"
     eslint-config-prettier: "npm:10.1.8"
-    lucide-react: "npm:^1.40.0"
+    lucide-react: "npm:^1.43.0"
     nanoid: "npm:^6.0.1"
     next: "npm:^16.3.4"
     next-themes: "npm:^0.4.6"
@@ -5897,12 +5897,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^1.40.0":
-  version: 1.41.0
-  resolution: "lucide-react@npm:1.41.0"
+"lucide-react@npm:^1.43.0":
+  version: 1.44.0
+  resolution: "lucide-react@npm:1.44.0"
   peerDependencies:
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10/4dcc98122b034e6ae8df38099a49585d697723ca6e554961ec192d7ac84ca1e80fbd4898ccf71fa28fb0a75bf605350f06e6c2313b351a00e223ed8a1172eed1
+  checksum: 10/a927cc1eb80aff44219c435f561e8e1ba8792f5660dfded2a8b4e2d150d52654bdce6ef0ec4fe7e5cf354f5e71639dbd0b31399648e20bba4a396f55f3351e8c
   languageName: node
   linkType: hard
 
