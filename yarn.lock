@@ -3786,7 +3786,7 @@ __metadata:
     eslint-config-prettier: "npm:10.1.8"
     lucide-react: "npm:^1.49.0"
     nanoid: "npm:^6.0.1"
-    next: "npm:^16.3.7"
+    next: "npm:^16.3.8"
     next-themes: "npm:^0.4.6"
     prettier: "npm:3.9.9"
     prettier-plugin-tailwindcss: "npm:0.8.1"
@@ -6415,7 +6415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^16.3.7":
+"next@npm:^16.3.8":
   version: 16.3.8
   resolution: "next@npm:16.3.8"
   dependencies:
