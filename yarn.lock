@@ -690,9 +690,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/resolvers@npm:^5.9.2":
-  version: 5.9.2
-  resolution: "@hookform/resolvers@npm:5.9.2"
+"@hookform/resolvers@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@hookform/resolvers@npm:6.0.0"
   dependencies:
     "@standard-schema/utils": "npm:^0.3.0"
   peerDependencies:
@@ -708,7 +708,7 @@ __metadata:
     class-transformer: ">=0.4.0"
     class-validator: ">=0.12.0"
     computed-types: ^1.0.0
-    effect: ^3.10.3
+    effect: ^4.0.0
     fluentvalidation-ts: ^3.0.0
     fp-ts: ^2.7.0
     io-ts: ^2.0.0
@@ -770,7 +770,7 @@ __metadata:
       optional: true
     zod:
       optional: true
-  checksum: 10/694f0385c0cc1bb141b8f400b208ac5802f8b6f4591419ca1843977b532210f3bcb3ad8853945b99d00ed92d7444898312f16967a3a51d06c23e875279dcabcc
+  checksum: 10/1b3e5f6c7aec3a2795c8b786cbee4a6db308ef58a6907d8f72f0d9f36502e23eea46d44ce3b055d4a7a27362e97884934661f42fef509b914e246b6dac9ac9c3
   languageName: node
   linkType: hard
 
@@ -3743,7 +3743,7 @@ __metadata:
     "@commitlint/cli": "npm:21.2.4"
     "@commitlint/config-conventional": "npm:21.2.4"
     "@discordjs/core": "npm:^2.6.0"
-    "@hookform/resolvers": "npm:^5.9.2"
+    "@hookform/resolvers": "npm:^6.0.0"
     "@radix-ui/react-label": "npm:^2.1.17"
     "@radix-ui/react-select": "npm:^2.4.1"
     "@radix-ui/react-separator": "npm:^1.2.0"
