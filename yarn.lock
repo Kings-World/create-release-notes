@@ -690,7 +690,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/resolvers@npm:^7.0.5":
+"@hookform/resolvers@npm:^7.0.6":
   version: 7.0.6
   resolution: "@hookform/resolvers@npm:7.0.6"
   dependencies:
@@ -3745,7 +3745,7 @@ __metadata:
     "@commitlint/cli": "npm:21.2.4"
     "@commitlint/config-conventional": "npm:21.2.4"
     "@discordjs/core": "npm:^2.7.0"
-    "@hookform/resolvers": "npm:^7.0.5"
+    "@hookform/resolvers": "npm:^7.0.6"
     "@radix-ui/react-label": "npm:^2.1.17"
     "@radix-ui/react-select": "npm:^2.4.1"
     "@radix-ui/react-separator": "npm:^1.2.0"
