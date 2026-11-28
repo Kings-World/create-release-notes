@@ -2702,12 +2702,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:26.6.7":
-  version: 26.6.7
-  resolution: "@types/node@npm:26.6.7"
+"@types/node@npm:*, @types/node@npm:26.6.10":
+  version: 26.6.10
+  resolution: "@types/node@npm:26.6.10"
   dependencies:
     undici-types: "npm:~8.9.0"
-  checksum: 10/6990282cd7f25609da26bca026f9ab62c94bf67b82c38b81608a8d6b34d51b7e91a95831b0dc55fa9c9d8066bc3b0def95308b1a61a275e6dd228ef82689bc44
+  checksum: 10/b4cd3369bcff5fa639b54748a6abda6e860e0c188a9b4c9f60cb6b58e683eff86697d1fc10eea1ce2c59c5daf21a91752387613b8b931062700a61b9b5ed2bf4
   languageName: node
   linkType: hard
 
@@ -2720,12 +2720,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.3.1":
-  version: 19.3.1
-  resolution: "@types/react@npm:19.3.1"
+"@types/react@npm:19.3.2":
+  version: 19.3.2
+  resolution: "@types/react@npm:19.3.2"
   dependencies:
     csstype: "npm:^3.2.2"
-  checksum: 10/5959f82d9cc3827b460d53d016fb4006f998df22c187101beb11f15a2a0207b2ce6c808eea3412ad283456aa289dca918ae668684c36e50a14a1e673d593d098
+  checksum: 10/ea1422b9fa4943aaacca60b44af12263c3f8fde3f07376cf5b119bc52634f03e7f6969c9b9b2e67a481dea1acb0575875ec830a12b8a72d4333d2d892bfc579b
   languageName: node
   linkType: hard
 
@@ -3753,8 +3753,8 @@ __metadata:
     "@t3-oss/env-nextjs": "npm:^0.13.11"
     "@tailwindcss/postcss": "npm:4.3.5"
     "@tailwindcss/typography": "npm:0.5.20"
-    "@types/node": "npm:26.6.7"
-    "@types/react": "npm:19.3.1"
+    "@types/node": "npm:26.6.10"
+    "@types/react": "npm:19.3.2"
     "@types/react-dom": "npm:19.3.0"
     "@types/semver": "npm:7.8.0"
     class-variance-authority: "npm:^0.7.1"
@@ -3762,7 +3762,7 @@ __metadata:
     eslint: "npm:9.39.5"
     eslint-config-next: "npm:16.4.6"
     eslint-config-prettier: "npm:10.1.8"
-    lucide-react: "npm:^1.79.0"
+    lucide-react: "npm:^1.80.0"
     nanoid: "npm:^6.0.2"
     next: "npm:^16.4.6"
     next-themes: "npm:^0.4.6"
@@ -5719,16 +5719,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lucide-react@npm:^1.79.0":
-  version: 1.81.0
-  resolution: "lucide-react@npm:1.81.0"
+"lucide-react@npm:^1.80.0":
+  version: 1.82.0
+  resolution: "lucide-react@npm:1.82.0"
   peerDependencies:
     "@types/react": "*"
     react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/71c20a46fd47f4df36b76ef1d43069ab468018ddd9fed076c720ee92d4e5d836d837397e29cf8d867e6d3e27037edd9dc6a2c73452704b2a82c12b25c2804d75
+  checksum: 10/603643e7de9f23d8a6a015c0b27b2303c8e1962f82fce325f64f59a86733a0d38252735538be8a2a2052c790431ae3ec7bcef70211a7f0be75b3ded6a484f3be
   languageName: node
   linkType: hard
 
